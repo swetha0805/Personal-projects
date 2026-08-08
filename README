@@ -1,0 +1,32 @@
+# Malaria Cell Classifier
+
+A web app that classifies blood smear cell images as Parasitized or 
+Uninfected using a CNN trained on the NIH malaria cell image dataset.
+
+## How it works
+- **Model**: Lightweight CNN (Conv2D → MaxPool ×3 → GlobalAveragePooling 
+  → Dense) trained on ~27,000 labeled cell images from the NIH malaria 
+  dataset. Achieves ~95% validation accuracy.
+- **Backend**: FastAPI serves the model via a /predict endpoint.
+- **Frontend**: Plain HTML/CSS/JS — drag-and-drop image upload, styled result card.
+
+## Architecture
+model/ → training + inference logic
+backend/ → FastAPI server
+frontend/ → static UI
+
+## Running locally
+[your setup steps — you already have this in your existing README]
+
+## Dataset
+NIH Malaria Cell Images Dataset, via Kaggle: 
+[link to the Kaggle page]
+
+## Limitations
+This is a demo/portfolio project, not a validated diagnostic tool. 
+The model is trained on a single dataset source and may not generalize 
+well to images from different microscopes, staining protocols, or 
+real-world clinical samples.
+
+## Tech stack
+TensorFlow/Keras, FastAPI, HTML/CSS/JS
